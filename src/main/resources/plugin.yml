@@ -1,0 +1,6 @@
+name: SaveVoidInventory
+version: '1.0'
+main: allroundergamin.savevoidinventory.Savevoidinventory
+api-version: 1.19
+authors: [ AllRounderGamin ]
+description: Allows the restoration of inventory upon deaths related to the void
