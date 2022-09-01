@@ -7,7 +7,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.NotNull;
 
 
 public class toggleSaveVoidInv implements CommandExecutor {
@@ -21,7 +20,7 @@ public class toggleSaveVoidInv implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String [] args){
+    public boolean onCommand(CommandSender sender, Command command, String label, String [] args){
         boolean newOpt = !(config.getBoolean("SaveVoidInventory"));
         config.set("SaveVoidInventory", newOpt);
         plugin.saveConfig();
