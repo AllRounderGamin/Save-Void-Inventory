@@ -1,6 +1,13 @@
 name: SaveVoidInventory
-version: '1.0'
-main: allroundergamin.savevoidinventory.Savevoidinventory
-api-version: 1.19
+version: '${version}'
+main: allroundergamin.savevoidinventory.SaveVoidInventory
+api-version: 1.18
 authors: [ AllRounderGamin ]
-description: Allows the restoration of inventory upon deaths related to the void
+description: A MC plugin which allows the saving of inventory after deaths to the void
+commands:
+  toggleSaveVoidInv:
+    description: Toggles whether inventory is saved on void specific deaths
+    usage: /toggleSaveVoidInventory
+    aliases: [tSVI, toggleSVI SaveVoidInventory]
+    permission: op
+    permission-message: Only op users can run this command!

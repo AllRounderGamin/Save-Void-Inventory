@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'allroundergamin'
+group = 'AllRounderGamin'
 version = '1.0'
 
 repositories {
@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'io.papermc.paper:paper-api:1.19.2-R0.1-SNAPSHOT'
+    compileOnly 'io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT'
 }
 
 def targetJavaVersion = 17

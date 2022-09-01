@@ -1,17 +1,21 @@
 package allroundergamin.savevoidinventory;
 
+import allroundergamin.savevoidinventory.commands.toggleSaveVoidInv;
+import allroundergamin.savevoidinventory.listeners.VoidDeathListener;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Savevoidinventory extends JavaPlugin {
+public final class SaveVoidInventory extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        Bukkit.getLogger().info("Save Void Inventory Enabled");
+
+        new VoidDeathListener(this);
 
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
     }
 }
