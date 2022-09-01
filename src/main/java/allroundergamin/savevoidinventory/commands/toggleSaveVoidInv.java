@@ -22,13 +22,13 @@ public class toggleSaveVoidInv implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String [] args){
-        boolean opt = config.getBoolean("SaveVoidInventory");
-        config.set("SaveVoidInventory", !opt);
+        boolean newOpt = !(config.getBoolean("SaveVoidInventory"));
+        config.set("SaveVoidInventory", newOpt);
         plugin.saveConfig();
 
         Player player = (Player) sender;
-        player.sendMessage("Save Void Inventory set to" + opt);
-        Bukkit.getLogger().info("Save Void Inventory set to " + opt);
+        player.sendMessage("Save Void Inventory set to " + newOpt);
+        Bukkit.getLogger().info("Save Void Inventory set to " + newOpt);
 
         return true;
     }

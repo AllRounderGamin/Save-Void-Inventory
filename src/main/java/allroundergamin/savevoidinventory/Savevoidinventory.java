@@ -18,11 +18,16 @@ public final class SaveVoidInventory extends JavaPlugin {
             saveDefaultConfig();
         }
 
-        Bukkit.getLogger().info("Save Void Inventory Enabled");
-
         getCommand("toggleSaveVoidInv").setExecutor(new toggleSaveVoidInv(this));
 
         new VoidDeathListener(this);
+
+        boolean pluginStatus = getConfig().getBoolean("SaveVoidInventory");
+        if (pluginStatus) {
+            Bukkit.getLogger().info("Save Void Inventory Loaded, Currently Enabled");
+        } else {
+            Bukkit.getLogger().info("Save Void Inventory Loaded, Currently Disabled");
+        }
 
     }
 

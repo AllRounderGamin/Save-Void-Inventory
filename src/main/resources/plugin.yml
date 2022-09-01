@@ -8,6 +8,6 @@ commands:
   toggleSaveVoidInv:
     description: Toggles whether inventory is saved on void specific deaths
     usage: /toggleSaveVoidInventory
-    aliases: [tSVI, toggleSVI SaveVoidInventory]
+    aliases: [tSVI, toggleSVI]
     permission: op
     permission-message: Only op users can run this command!
